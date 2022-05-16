@@ -1,9 +1,9 @@
 //get a reference to the calculate button
-const billStringElement = document.querySelector(".billString");
+const calculateBtn = document.querySelector(".calculateBtn")
 //get a reference to the billTotal element
-
+const billTotalElement = document.querySelector(".billTotal");
 //get a reference to the billString
-
+const billStringElement = document.querySelector(".billString");
 //create the function that will be called when the calculate button is pressed
 //  * this function should read the string value entered - split it on a comma.
 //  * loop over all the entries in the the resulting list
