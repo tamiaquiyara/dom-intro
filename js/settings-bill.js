@@ -56,10 +56,10 @@ function settingsBillTotal(){
     total.innerHTML = totalCost;
 
     if (totalCost >= warningLevel){
-        total.classList.add("warning");
+        total.classList.add("danger");
     }
     else if (totalCost >= criticalLevel){
-        total.classList.add("danger");
+        total.classList.add("warning");
     }
 }
 //add an event listener for when the 'Update settings' button is pressed
