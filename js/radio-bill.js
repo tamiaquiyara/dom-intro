@@ -29,10 +29,10 @@ function radioBillTotal(){
     var totalCostTwo = callsTotalRadio + smsTotalRadio;
     totalTwo.innerHTML = totalCostTwo.toFixed(2);
     
-    if (totalCostTwo === "call"){
+    if (totalCostTwo >= 30){
         totalTwo.classList.add('danger');
     }
-    else if (totalCostTwo === "sms"){
+    else if (totalCostTwo >= 50){
         totalTwo.classList.add('warning');
     }
 }

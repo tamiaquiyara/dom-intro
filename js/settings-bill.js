@@ -27,7 +27,7 @@ const smsTotalSetting = document.querySelector(".smsTotalSettings");
 const total = document.querySelector(".totalSettings");
 
 function settingsUpdate(){
-    alert(updateSettingsBtn);
+    // alert(updateSettingsBtn);
     callCost = parseFloat(callCostSettings.value);
     smsCost = parseFloat(smsCostSettings.value);
     warningLevel = parseFloat(warningLevelSetting.value);
@@ -36,7 +36,7 @@ function settingsUpdate(){
 
 
 function settingsBillTotal(){
-    alert(settingsAddBtn);
+    // alert(settingsAddBtn);
    
 
     var checkedSettingsBtn = document.querySelector("input[name='billItemTypeWithSettings']:checked");
