@@ -50,17 +50,17 @@ function settingsBillTotal(){
         smsTotals += smsCost;
     }
     
-    callsTotalSetting.innerHTML = callTotals;
-    smsTotalSetting.innerHTML = smsTotals;
-    var totalCost = callTotals + smsTotals;
-    total.innerHTML = totalCost;
+    callsTotalSetting.innerHTML = callTotals;//.toFixed(2);
+    smsTotalSetting.innerHTML = smsTotals;//.toFixed(2);
+    var totalCostSettings = callTotals + smsTotals;//.toFixed(2);
+    total.innerHTML = totalCostSettings;//.toFixed(2);
 
-    if (totalCost >= warningLevel){
-        total.classList.add("warning");
+    if (totalCostSettings >= criticalLevel){
+        total.classList.add("danger");
     }
     
-    else if (totalCost >= criticalLevel){
-        total.classList.add('danger');
+    else if (totalCostSettings >= warningLevel){
+        total.classList.add('warning');
     }
 }
 //add an event listener for when the 'Update settings' button is pressed
