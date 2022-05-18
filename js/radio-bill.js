@@ -28,6 +28,9 @@ function radioBillTotal(){
     smsTotalTwo.innerHTML = smsTotalRadio.toFixed(2);
     var totalCostTwo = callsTotalRadio + smsTotalRadio;
     totalTwo.innerHTML = totalCostTwo.toFixed(2);
+
+    totalTwo.classList.remove('warning');
+    totalTwo.classList.remove('danger');
     
     if (totalCostTwo >= 50){
         totalTwo.classList.add('danger');

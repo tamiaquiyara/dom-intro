@@ -42,18 +42,22 @@ function settingsBillTotal(){
     var checkedSettingsBtn = document.querySelector("input[name='billItemTypeWithSettings']:checked");
     var settingsItemType = checkedSettingsBtn.value;
     
-    
+    if (callTotals < criticalLevel){
     if (settingsItemType === "call"){
         callTotals += callCost;
     }
     else if (settingsItemType === "sms"){
         smsTotals += smsCost;
     }
+}
     
     callsTotalSetting.innerHTML = callTotals;//.toFixed(2);
     smsTotalSetting.innerHTML = smsTotals;//.toFixed(2);
     var totalCostSettings = callTotals + smsTotals;//.toFixed(2);
     total.innerHTML = totalCostSettings;//.toFixed(2);
+
+    total.classList.remove('warning');
+    total.classList.remove("danger");
 
     if (totalCostSettings >= criticalLevel){
         total.classList.add("danger");

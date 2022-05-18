@@ -31,11 +31,14 @@ function calculateBtnClicked(){
     var roundedBillTotal = billTotal.toFixed(2);
     billTotalElement.innerHTML = roundedBillTotal;
 
-    if (roundedBillTotal >= 50){
+    billTotalElement.classList.remove("warning");
+    billTotalElement.classList.remove("danger");
+
+    if (roundedBillTotal >= 30){
         // adding the danger class will make the text red
         billTotalElement.classList.add("danger");
     }
-    else if (roundedBillTotal >= 30){
+    else if (roundedBillTotal >= 20){
         billTotalElement.classList.add("warning");
     }
 }
