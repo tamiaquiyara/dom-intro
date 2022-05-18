@@ -51,10 +51,10 @@ function settingsBillTotal(){
     }
 }
     
-    callsTotalSetting.innerHTML = callTotals;//.toFixed(2);
-    smsTotalSetting.innerHTML = smsTotals;//.toFixed(2);
-    var totalCostSettings = callTotals + smsTotals;//.toFixed(2);
-    total.innerHTML = totalCostSettings;//.toFixed(2);
+    callsTotalSetting.innerHTML = callTotals.toFixed(2);
+    smsTotalSetting.innerHTML = smsTotals.toFixed(2);
+    var totalCostSettings = callTotals + smsTotals;
+    total.innerHTML = totalCostSettings.toFixed(2);
 
     total.classList.remove('warning');
     total.classList.remove("danger");
